@@ -1,7 +1,8 @@
 name: rx_future
 description: A powerful library that integrate Getx Rx to introduce a new type called RxFuture which make it easy to handle future states (loading, error) and get the result of this future, with some functionality like canceling the future.
 version: 1.0.0
-homepage: "https://github.com/tareq-alsayed/rx_future"
+homepage: "https://github.com/tareq-alsayed/rx_future/blob/main/lib/rx_future.dart"
+repository: "https://github.com/tareq-alsayed/rx_future"
 
 environment:
   sdk: ">=2.16.1 <3.0.0"
