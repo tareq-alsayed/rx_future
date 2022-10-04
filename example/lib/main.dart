@@ -1,7 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import './controller.dart';
+import 'package:rx_future/rx_future.dart';
 
 void main() {
   Get.put<MyController>(MyController());
@@ -77,4 +79,28 @@ class MyHomePage extends StatelessWidget {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+class MyController extends GetxController {
+  RxFuture<int> state = RxFuture(0);
+
+  Future<void> getData() async {
+    await state.observe(
+      (val) async {
+        return await getRandomNumber();
+      },
+      onSuccess: (val) {
+        print("Success Getting Number $val");
+      },
+    );
+  }
+
+  void cancel() {
+    state.cancel();
+  }
+}
+
+Future<int> getRandomNumber() async {
+  await Future.delayed(const Duration(seconds: 3));
+  return Random().nextInt(500);
 }
