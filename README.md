@@ -8,7 +8,7 @@ A powerful library that integrate Getx Rx to introduce a new type called RxFutur
 
 ```yaml
 dependencies:
-  rx_future: ^1.0.1
+  rx_future: ^1.0.2
 ```
 
 ### Super simple to use

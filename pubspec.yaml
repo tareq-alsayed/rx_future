@@ -1,6 +1,6 @@
 name: rx_future
 description: introducing a new type in getx called RxFuture to listen to future state.
-version: 1.0.1
+version: 1.0.2
 homepage: "https://github.com/tareq-alsayed/rx_future/blob/main/lib/rx_future.dart"
 repository: "https://github.com/tareq-alsayed/rx_future"
 
